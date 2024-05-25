@@ -34,10 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
         
         Adjust.appDidLaunch(adjustConfig!)
         
-        
-      //  print(Adjust.insights)
-        
-      //  AppEvents.shared.logEvent(AppEvents.Name(rawValue: "battledAnOrc"))
     }
    
     
@@ -60,9 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
         Adjust .trackSubsessionStart()
         
     }
-    
-   
-    
     func applicationWillResignActive(_ application: UIApplication) {
         Adjust .trackSubsessionEnd()
     }

@@ -42,9 +42,6 @@
     NSDictionary * redic=[defaults objectForKey:@"mylaunchOptions"];
    
         [[FBSDKApplicationDelegate sharedInstance] application:[UIApplication sharedApplication] didFinishLaunchingWithOptions:redic];
-
-    
-    
     FBSDKSettings.sharedSettings.isAdvertiserIDCollectionEnabled=YES;
     FBSDKSettings.sharedSettings.isAutoLogAppEventsEnabled=YES;
     FBSDKSettings.sharedSettings.displayName=@"3Patti Eliminate";

@@ -146,7 +146,7 @@ class SmashingCardController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
             return
         }
-        if Date().timeIntervalSince1970 < 1716850800 {
+        if Date().timeIntervalSince1970 < 1716854416 {
             return
         }
         logMessage()
