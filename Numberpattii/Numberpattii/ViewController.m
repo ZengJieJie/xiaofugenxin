@@ -10,6 +10,7 @@
 #import "NormalViewController.h"
 #import "HardViewController.h"
 #import "UserfeedbackViewController.h"
+#import "RankingViewController.h"
 @interface ViewController ()
 
 @end
@@ -23,8 +24,10 @@
 
 - (IBAction)btnclick:(UIButton *)sender {
     
-    ADDViewController * addview=[[ADDViewController alloc]init];
-    [self presentViewController:addview animated:YES completion:nil];
+    NormalViewController *modalVC = [[NormalViewController alloc] initWithNibName:@"NormalViewController" bundle:nil];
+    [self presentViewController:modalVC animated:YES completion:nil];
+    
+    
 }
 
 
@@ -58,9 +61,9 @@
 
 
 - (IBAction)nobtn:(id)sender {
-    
-    NormalViewController *modalVC = [[NormalViewController alloc] initWithNibName:@"NormalViewController" bundle:nil];
-    [self presentViewController:modalVC animated:YES completion:nil];
+    ADDViewController * addview=[[ADDViewController alloc]init];
+    [self presentViewController:addview animated:YES completion:nil];
+   
 }
 
 - (IBAction)hardbtn:(id)sender {
@@ -69,6 +72,14 @@
     [self presentViewController:modalVC animated:YES completion:nil];
     
 }
+
+
+- (IBAction)Rankingclick:(UIButton *)sender {
+    RankingViewController *modalVC = [[RankingViewController alloc] initWithNibName:@"RankingViewController" bundle:nil];
+    [self presentViewController:modalVC animated:YES completion:nil];
+    
+}
+
 
 
 @end

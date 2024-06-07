@@ -60,7 +60,7 @@
            make.bottom.equalTo(self.view).offset(-10);
        }];
     UIImageView * backimage=[[UIImageView alloc]init];
-    [backimage setImage:[UIImage imageNamed:@"组 12"]];
+    [backimage setImage:[UIImage imageNamed:@"图层 3"]];
     [customView addSubview:backimage];
     
     [backimage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -82,7 +82,7 @@
     [customView addSubview:self.collectionView];
     // 使用 Masonry 设置约束
        [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-           make.edges.equalTo(customView).insets(UIEdgeInsetsMake(10, 10, 10, 10)); // 距离父视图四周10个像素
+           make.edges.equalTo(customView).insets(UIEdgeInsetsMake(30, 30, 5, 30)); // 距离父视图四周10个像素
        }];
     [self startTimer];
 }
@@ -127,6 +127,7 @@
                                                                                 message:@"Game over"
                                                                          preferredStyle:UIAlertControllerStyleAlert];
        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+           [self nsuserdatte];
            [self dismissViewControllerAnimated:YES completion:nil];
          
        }];
@@ -251,6 +252,7 @@
         
         [self updatgmae];
         [self startTimer];
+      
     }];
     
     // 将确定按钮添加到弹窗
@@ -261,6 +263,30 @@
 }
     
 
+-(void)nsuserdatte{
+    NSDate *currentDate = [NSDate date];
+       
+      
+       NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+       [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+       
+       
+       NSString *dateString = [dateFormatter stringFromDate:currentDate];
+    NSString * paimstr=[NSString stringWithFormat:@"%@  %d Round Simple",dateString,self.huiheiint];
+       
+      
+       NSMutableArray *datesArray = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"datesArray"] mutableCopy];
+       if (!datesArray) {
+           datesArray = [NSMutableArray array];
+       }
+       
+    // 添加当前时间到数组的前面
+       [datesArray insertObject:paimstr atIndex:0];
+       
+       // 保存数组到 NSUserDefaults
+       [[NSUserDefaults standardUserDefaults] setObject:datesArray forKey:@"datesArray"];
+       [[NSUserDefaults standardUserDefaults] synchronize];
+}
 -(void)updatgmae{
     self.huiheiint++;
     [self.huihelab setText:[NSString stringWithFormat:@"%d Round",self.huiheiint]];
@@ -292,7 +318,7 @@
 //随机生成一组数学数字
 - (void)generateValidNumbers {
     int a = 0, b = 0, c = 0;
-    NSString* operator = @"\0";
+    NSString* stringa = @"\0";
     BOOL valid = NO;
     while (!valid) {
         a = arc4random_uniform(10) + 1;
@@ -301,20 +327,20 @@
         switch (op) {
             case 0:
                 c = a + b;
-                operator = @"+";
+                stringa = @"+";
                 break;
             case 1:
                 c = a - b;
-                operator = @"-";
+                stringa = @"-";
                 break;
             case 2:
                 c = a * b;
-                operator = @"*";
+                stringa = @"*";
                 break;
             case 3:
                 if (b != 0 && a % b == 0) {
                     c = a / b;
-                    operator = @"/";
+                    stringa = @"/";
                 } else {
                     continue; // 无效运算，继续生成
                 }
@@ -329,11 +355,12 @@
     self.onwint=a;
     self.twoint=b;
     self.threeint=c/10;
-    self.fuhaostring=operator;
+    self.fuhaostring=stringa;
     self.fourint = c % 10;
    
 }
 - (IBAction)backclick:(id)sender {
+    [self nsuserdatte];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -349,14 +376,9 @@
        return 10; // 无间距
    }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
 
 @end

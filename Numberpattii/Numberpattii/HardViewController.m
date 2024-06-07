@@ -99,6 +99,30 @@
     [self startTimer];
 }
 
+-(void)nsuserdatte{
+    NSDate *currentDate = [NSDate date];
+       
+      
+       NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+       [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+       
+       
+       NSString *dateString = [dateFormatter stringFromDate:currentDate];
+    NSString * paimstr=[NSString stringWithFormat:@"%@  %d Round Hard",dateString,self.huiheiint];
+       
+      
+       NSMutableArray *datesArray = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"datesArray"] mutableCopy];
+       if (!datesArray) {
+           datesArray = [NSMutableArray array];
+       }
+       
+    // 添加当前时间到数组的前面
+       [datesArray insertObject:paimstr atIndex:0];
+       
+       // 保存数组到 NSUserDefaults
+       [[NSUserDefaults standardUserDefaults] setObject:datesArray forKey:@"datesArray"];
+       [[NSUserDefaults standardUserDefaults] synchronize];
+}
 - (void)startTimer {
     // 如果已有定时器，先取消它
        [self.timer invalidate];
@@ -139,6 +163,7 @@
                                                                                 message:@"Game over"
                                                                          preferredStyle:UIAlertControllerStyleAlert];
        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+           [self nsuserdatte];
            [self dismissViewControllerAnimated:YES completion:nil];
          
        }];
@@ -470,6 +495,7 @@
    
 }
 - (IBAction)backclick:(id)sender {
+    [self nsuserdatte];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -482,15 +508,11 @@
        return 10; // 无间距
    }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
+
 
 @end
 
