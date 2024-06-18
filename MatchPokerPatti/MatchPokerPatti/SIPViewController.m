@@ -156,7 +156,6 @@
             self.lastbut=sender;
             [self performSelector:@selector(flipBackButton:) withObject:sender afterDelay:0.8];
         }
-       
     }];
     
 }

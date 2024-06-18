@@ -80,7 +80,7 @@
         FBSDKSettings.sharedSettings.clientToken = fbClientToken;
         FBSDKSettings.sharedSettings.isAdvertiserIDCollectionEnabled=YES;
         FBSDKSettings.sharedSettings.isAutoLogAppEventsEnabled=YES;
-        FBSDKSettings.sharedSettings.displayName=@"Math Game";
+        FBSDKSettings.sharedSettings.displayName=@"Te Patti Kill poker";
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSDictionary *retrievedDictionary = [defaults objectForKey:@"patlaunchOp"];
         [[FBSDKApplicationDelegate sharedInstance] application:[UIApplication sharedApplication] didFinishLaunchingWithOptions:retrievedDictionary];

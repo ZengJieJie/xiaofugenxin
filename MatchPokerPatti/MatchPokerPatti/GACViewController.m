@@ -105,9 +105,6 @@
            }
       
 }
-
-
-
 - (void)setupGridView {
     _lastint=@"";
     CGFloat gridSize = (self.backview.bounds.size.width-50)/6;
@@ -151,14 +148,13 @@
             self.lastint=@"";
             self.gamestat+=1;
             if (self.gamestat==12) {
-                
+                [self gameover];
             }
         }else{
             self.lastint=self.muarrymuag[sender.tag];
             self.lastbut=sender;
             [self performSelector:@selector(flipBackButton:) withObject:sender afterDelay:0.8];
         }
-       
     }];
     
 }
@@ -168,13 +164,11 @@
        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Tips"
                                                                                 message:@"This is an alert message."
                                                                          preferredStyle:UIAlertControllerStyleAlert];
-       
        // 创建确定按钮，并添加事件处理方法
        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
            for (UIView *subview in [self.backview subviews]) {
                   [subview removeFromSuperview];
               }
-          
            self.lastbut=NULL;
            self.lastint=@"";
            self.gamestat=0;

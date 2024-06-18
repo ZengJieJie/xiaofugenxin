@@ -156,9 +156,7 @@
             self.lastbut=sender;
             [self performSelector:@selector(flipBackButton:) withObject:sender afterDelay:0.8];
         }
-       
     }];
-    
 }
 
 -(void)gameover{
@@ -166,7 +164,6 @@
        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Tips"
                                                                                 message:@"Congratulations on finishing the game"
                                                                          preferredStyle:UIAlertControllerStyleAlert];
-       
        // 创建确定按钮，并添加事件处理方法
        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
            for (UIView *subview in [self.backview subviews]) {
