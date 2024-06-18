@@ -30,7 +30,7 @@
 
 - (IBAction)sendciilcik:(id)sender {
    
-       NSURL *urlToShare = [NSURL URLWithString:@"https://apps.apple.com/app/memory-rummy/id6503871485"];
+       NSURL *urlToShare = [NSURL URLWithString:@"https://apps.apple.com/app/Te-Patti-Kill-poker/id6504505318"];
        
     
        NSMutableArray * mutableArrayab = [NSMutableArray array];
