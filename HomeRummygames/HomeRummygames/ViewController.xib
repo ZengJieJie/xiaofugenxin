@@ -64,7 +64,6 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="4"/>
                     <connections>
-                        <action selector="gameguizeview:" destination="-1" eventType="touchUpInside" id="Nhv-rt-pBC"/>
                         <action selector="sharclick:" destination="-1" eventType="touchUpInside" id="JUm-6C-Er3"/>
                     </connections>
                 </button>
