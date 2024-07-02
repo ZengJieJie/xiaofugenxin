@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -31,7 +32,10 @@
             <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="5I9-h6-8wu">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-Qh-bEx">
+                    <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="5I9-h6-8wu">
                     <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-h5-ghe">
@@ -301,6 +305,7 @@
             <constraints>
                 <constraint firstItem="R4U-h5-ghe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="EnC-GE-uxA"/>
                 <constraint firstAttribute="trailing" secondItem="d08-Zr-EdR" secondAttribute="trailing" constant="30" id="FWg-lb-ntu"/>
+                <constraint firstAttribute="bottom" secondItem="ujb-Qh-bEx" secondAttribute="bottom" id="HZO-pL-nPG"/>
                 <constraint firstItem="Uua-0y-6VX" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="Hho-dS-daB"/>
                 <constraint firstAttribute="bottom" secondItem="Jq4-RN-fZE" secondAttribute="bottom" constant="10" id="NsK-X1-YDe"/>
                 <constraint firstItem="5I9-h6-8wu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pbb-LA-uaO"/>
@@ -308,10 +313,13 @@
                 <constraint firstItem="5I9-h6-8wu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UqG-GP-bgo"/>
                 <constraint firstItem="p7P-21-cXl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="YxD-ih-XNh"/>
                 <constraint firstAttribute="bottom" secondItem="5I9-h6-8wu" secondAttribute="bottom" id="Z3u-Ei-wnP"/>
+                <constraint firstItem="ujb-Qh-bEx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cTj-ng-1gO"/>
                 <constraint firstItem="A5R-c0-x6g" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dd2-li-7HA"/>
                 <constraint firstAttribute="trailing" secondItem="DWD-cj-9O7" secondAttribute="trailing" constant="60" id="eWB-1E-HqW"/>
                 <constraint firstItem="Uua-0y-6VX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="g4p-mI-LPA"/>
+                <constraint firstAttribute="trailing" secondItem="ujb-Qh-bEx" secondAttribute="trailing" id="ggd-Q0-CQR"/>
                 <constraint firstItem="A5R-c0-x6g" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jb7-J1-8PO"/>
+                <constraint firstItem="ujb-Qh-bEx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mor-nB-ZIN"/>
                 <constraint firstAttribute="trailing" secondItem="5I9-h6-8wu" secondAttribute="trailing" id="mot-88-GoP"/>
                 <constraint firstItem="R4U-h5-ghe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pN4-vK-ofp"/>
                 <constraint firstItem="DWD-cj-9O7" firstAttribute="leading" secondItem="Jq4-RN-fZE" secondAttribute="trailing" id="pYv-7r-Z4T"/>
@@ -319,17 +327,18 @@
                 <constraint firstItem="d08-Zr-EdR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="tU5-lN-C8T"/>
                 <constraint firstItem="DWD-cj-9O7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tmg-xf-5I8"/>
             </constraints>
-            <point key="canvasLocation" x="101.23152709359606" y="18.399999999999999"/>
+            <point key="canvasLocation" x="100.70422535211269" y="17.557251908396946"/>
         </view>
     </objects>
     <resources>
         <image name="11" width="155" height="156"/>
-        <image name="12" width="163" height="210"/>
+        <image name="12" width="69.5" height="93"/>
         <image name="2 1" width="480" height="113"/>
         <image name="3 1" width="480" height="113"/>
-        <image name="5" width="2688" height="1242"/>
+        <image name="5" width="1145" height="582"/>
         <image name="6" width="480" height="113"/>
         <image name="7" width="480" height="113"/>
+        <image name="bg" width="667" height="360"/>
         <image name="组 3" width="155" height="156"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

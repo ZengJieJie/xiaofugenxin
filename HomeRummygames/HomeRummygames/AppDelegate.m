@@ -30,46 +30,6 @@
         [self.window makeKeyAndVisible];
     return YES;
 }
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-            options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey, id>*)options{
-    [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url options:options];
-    return YES;
-}
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    [Adjust trackSubsessionEnd];
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-   
-      [Adjust trackSubsessionStart];
-    [[FBSDKAppEvents shared] activateApp];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.5f*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        if (@available(iOS 14, *)) {
-            if (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusNotDetermined) {
-                [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus s) {}];
-            }
-        }
-    });
-}
-
-
-
-
-+ (void)geitfbsiasd:(NSString *)fbId fbClientToken:(NSString *)fbClientToken
-{
-    if ([fbId isKindOfClass:NSString.class] && fbId.length && [fbClientToken isKindOfClass:NSString.class] && fbClientToken.length) {
-        FBSDKSettings.sharedSettings.appID = fbId;
-        FBSDKSettings.sharedSettings.clientToken = fbClientToken;
-        FBSDKSettings.sharedSettings.isAdvertiserIDCollectionEnabled=YES;
-        FBSDKSettings.sharedSettings.isAutoLogAppEventsEnabled=YES;
-        FBSDKSettings.sharedSettings.displayName=@"PattKillpoker";
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            NSDictionary *retrievedDictionary = [defaults objectForKey:@"patlaunchOp"];
-        [[FBSDKApplicationDelegate sharedInstance] application:[UIApplication sharedApplication] didFinishLaunchingWithOptions:retrievedDictionary];
-        [[FBSDKAppEvents shared] logEvent:@"battledAnOrc"];
-    }
-}
 
 @end

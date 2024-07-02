@@ -264,7 +264,6 @@
             Card * bar=self.players[2][i][j];
             [self.leftparry addObject:bar];
         }
-        
     }
     self.rightparry=[[NSMutableArray alloc]init];
     NSMutableArray *cardsArray6 = self.players[3];

@@ -31,6 +31,33 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
+
+- (IBAction)sharclick:(id)sender {
+    
+    NSURL *urlToShare = [NSURL URLWithString:@"https://apps.apple.com/app/Teen-Patti-Suit-Card/id6504858884"];
+    
+ 
+    NSMutableArray * mutableArrayab = [NSMutableArray array];
+    
+    
+    [mutableArrayab addObject:urlToShare];
+
+  
+    // 创建分享vc
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:mutableArrayab applicationActivities:nil];
+   
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+     // 分享之后的回调
+    activityVC.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
+       
+    };
+    
+    
+}
+
+
+
 /*
 #pragma mark - Navigation
 
