@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "启动页.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
