@@ -10,6 +10,7 @@ target 'MemoryCard' do
   pod 'SnapKit'
   pod 'Adjust'
   pod 'ReachabilitySwift'
+  pod 'Masonry'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

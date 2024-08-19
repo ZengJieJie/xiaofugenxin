@@ -21,7 +21,10 @@
 		6CC89AE52BC52EA800753232 /* OperationCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC89AE42BC52EA800753232 /* OperationCardController.swift */; };
 		6CC89AE72BC5327B00753232 /* OperationSimpleGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC89AE62BC5327B00753232 /* OperationSimpleGameController.swift */; };
 		D47E4ADAF29D738F9FFF2925 /* Pods_MemoryCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46411543601DC0E51CB4596F /* Pods_MemoryCard.framework */; };
-		FF641CF12C6E0689004C833B /* OperationPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF641CF02C6E0689004C833B /* OperationPrivacyViewController.swift */; };
+		FF0E502E2C7379FC007DC167 /* OperationPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E502D2C7379FC007DC167 /* OperationPrivacyViewController.m */; };
+		FF0E50352C737A45007DC167 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E50322C737A45007DC167 /* WKWebViewJavascriptBridge.m */; };
+		FF0E50362C737A45007DC167 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E50332C737A45007DC167 /* WebViewJavascriptBridge_JS.m */; };
+		FF0E50372C737A45007DC167 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E50342C737A45007DC167 /* WebViewJavascriptBridgeBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +46,15 @@
 		6CC89AE42BC52EA800753232 /* OperationCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCardController.swift; sourceTree = "<group>"; };
 		6CC89AE62BC5327B00753232 /* OperationSimpleGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationSimpleGameController.swift; sourceTree = "<group>"; };
 		8E10FC4730F060C63BF43FCD /* Pods-MemoryCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryCard.debug.xcconfig"; path = "Target Support Files/Pods-MemoryCard/Pods-MemoryCard.debug.xcconfig"; sourceTree = "<group>"; };
-		FF641CF02C6E0689004C833B /* OperationPrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationPrivacyViewController.swift; sourceTree = "<group>"; };
+		FF0E502B2C7379FC007DC167 /* MemoryCard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryCard-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF0E502C2C7379FC007DC167 /* OperationPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationPrivacyViewController.h; sourceTree = "<group>"; };
+		FF0E502D2C7379FC007DC167 /* OperationPrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationPrivacyViewController.m; sourceTree = "<group>"; };
+		FF0E502F2C737A45007DC167 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		FF0E50302C737A45007DC167 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		FF0E50312C737A45007DC167 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		FF0E50322C737A45007DC167 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		FF0E50332C737A45007DC167 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		FF0E50342C737A45007DC167 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				6CC89AE42BC52EA800753232 /* OperationCardController.swift */,
-				FF641CF02C6E0689004C833B /* OperationPrivacyViewController.swift */,
+				FF0E502C2C7379FC007DC167 /* OperationPrivacyViewController.h */,
+				FF0E502D2C7379FC007DC167 /* OperationPrivacyViewController.m */,
 				6CC89AE62BC5327B00753232 /* OperationSimpleGameController.swift */,
 				6C0C95A52BC9149D00079487 /* OperationDifficultyGameController.swift */,
 				6C3F01C42BC65BFD00B20B9E /* OperationCardGameTableView.swift */,
@@ -96,12 +108,19 @@
 				6C3F01C62BC65CE500B20B9E /* OperationCardGameData.swift */,
 				6C0C95A72BC915BA00079487 /* OperationCardRulesView.swift */,
 				6C6B01EF2BAAE48D000BFA44 /* AppDelegate.swift */,
+				FF0E50312C737A45007DC167 /* WebViewJavascriptBridge_JS.h */,
+				FF0E50332C737A45007DC167 /* WebViewJavascriptBridge_JS.m */,
+				FF0E502F2C737A45007DC167 /* WebViewJavascriptBridgeBase.h */,
+				FF0E50342C737A45007DC167 /* WebViewJavascriptBridgeBase.m */,
+				FF0E50302C737A45007DC167 /* WKWebViewJavascriptBridge.h */,
+				FF0E50322C737A45007DC167 /* WKWebViewJavascriptBridge.m */,
 				6C6B01F82BAAE48E000BFA44 /* Assets.xcassets */,
 				6C6B01FA2BAAE48E000BFA44 /* LaunchScreen.storyboard */,
 				6C6B01FD2BAAE48E000BFA44 /* Info.plist */,
 				6C61DD1C2BAAF253007E19DB /* UIView+Extension.swift */,
 				6C9C2C512BBAA30000331F24 /* UITableView+Extension.swift */,
 				6C9827C62BABE1B600E65B39 /* Utils.swift */,
+				FF0E502B2C7379FC007DC167 /* MemoryCard-Bridging-Header.h */,
 			);
 			path = OperationCard;
 			sourceTree = "<group>";
@@ -149,6 +168,7 @@
 				TargetAttributes = {
 					6C6B01EB2BAAE48D000BFA44 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -233,12 +253,15 @@
 				6C9C2C532BBAA30000331F24 /* UITableView+Extension.swift in Sources */,
 				6C0C95A62BC9149D00079487 /* OperationDifficultyGameController.swift in Sources */,
 				6C0C95A82BC915BA00079487 /* OperationCardRulesView.swift in Sources */,
+				FF0E50372C737A45007DC167 /* WebViewJavascriptBridgeBase.m in Sources */,
+				FF0E50352C737A45007DC167 /* WKWebViewJavascriptBridge.m in Sources */,
 				6C3F01C52BC65BFD00B20B9E /* OperationCardGameTableView.swift in Sources */,
 				6C6B01F02BAAE48D000BFA44 /* AppDelegate.swift in Sources */,
 				6CC89AE72BC5327B00753232 /* OperationSimpleGameController.swift in Sources */,
+				FF0E502E2C7379FC007DC167 /* OperationPrivacyViewController.m in Sources */,
 				6C9827C72BABE1B600E65B39 /* Utils.swift in Sources */,
+				FF0E50362C737A45007DC167 /* WebViewJavascriptBridge_JS.m in Sources */,
 				6C3F01C72BC65CE500B20B9E /* OperationCardGameData.swift in Sources */,
-				FF641CF12C6E0689004C833B /* OperationPrivacyViewController.swift in Sources */,
 				6C3F01C92BC65F0B00B20B9E /* OperationCardGameTableViewCell.swift in Sources */,
 				6CC89AE52BC52EA800753232 /* OperationCardController.swift in Sources */,
 			);
@@ -383,6 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
@@ -394,7 +418,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -409,6 +434,8 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OperationCard/MemoryCard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -420,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
@@ -431,7 +459,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,6 +475,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OperationCard/MemoryCard-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
