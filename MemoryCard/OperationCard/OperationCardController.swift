@@ -11,7 +11,7 @@ extension Notification.Name {
 var adsData: [String: Any]?
 
 /// 加减乘除算法卡牌游戏主控制器
-class OperationCardController: UIViewController {
+class OperationCardController: OperationBaseViewController {
     
     var privacyBtn: UIButton!
     var reachability: Reachability!

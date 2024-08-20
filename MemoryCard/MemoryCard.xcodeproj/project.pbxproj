@@ -22,9 +22,10 @@
 		6CC89AE72BC5327B00753232 /* OperationSimpleGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC89AE62BC5327B00753232 /* OperationSimpleGameController.swift */; };
 		D47E4ADAF29D738F9FFF2925 /* Pods_MemoryCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46411543601DC0E51CB4596F /* Pods_MemoryCard.framework */; };
 		FF0E502E2C7379FC007DC167 /* OperationPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E502D2C7379FC007DC167 /* OperationPrivacyViewController.m */; };
-		FF0E50352C737A45007DC167 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E50322C737A45007DC167 /* WKWebViewJavascriptBridge.m */; };
-		FF0E50362C737A45007DC167 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E50332C737A45007DC167 /* WebViewJavascriptBridge_JS.m */; };
-		FF0E50372C737A45007DC167 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0E50342C737A45007DC167 /* WebViewJavascriptBridgeBase.m */; };
+		FF6772D92C739FAD005E127B /* OperationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6772D82C739FAD005E127B /* OperationBaseViewController.swift */; };
+		FFD038CE2C7436CD008CA3D0 /* OperationWebCofig_FUC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD038CD2C7436CD008CA3D0 /* OperationWebCofig_FUC.m */; };
+		FFD038D12C743720008CA3D0 /* OperationWebViewJBriBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD038D02C743720008CA3D0 /* OperationWebViewJBriBase.m */; };
+		FFD038D42C743775008CA3D0 /* OperationWKWebViewJBri.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD038D32C743775008CA3D0 /* OperationWKWebViewJBri.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,12 +50,13 @@
 		FF0E502B2C7379FC007DC167 /* MemoryCard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoryCard-Bridging-Header.h"; sourceTree = "<group>"; };
 		FF0E502C2C7379FC007DC167 /* OperationPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationPrivacyViewController.h; sourceTree = "<group>"; };
 		FF0E502D2C7379FC007DC167 /* OperationPrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationPrivacyViewController.m; sourceTree = "<group>"; };
-		FF0E502F2C737A45007DC167 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		FF0E50302C737A45007DC167 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		FF0E50312C737A45007DC167 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		FF0E50322C737A45007DC167 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		FF0E50332C737A45007DC167 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		FF0E50342C737A45007DC167 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		FF6772D82C739FAD005E127B /* OperationBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationBaseViewController.swift; sourceTree = "<group>"; };
+		FFD038CC2C7436CD008CA3D0 /* OperationWebCofig_FUC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationWebCofig_FUC.h; sourceTree = "<group>"; };
+		FFD038CD2C7436CD008CA3D0 /* OperationWebCofig_FUC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationWebCofig_FUC.m; sourceTree = "<group>"; };
+		FFD038CF2C743720008CA3D0 /* OperationWebViewJBriBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationWebViewJBriBase.h; sourceTree = "<group>"; };
+		FFD038D02C743720008CA3D0 /* OperationWebViewJBriBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationWebViewJBriBase.m; sourceTree = "<group>"; };
+		FFD038D22C743775008CA3D0 /* OperationWKWebViewJBri.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationWKWebViewJBri.h; sourceTree = "<group>"; };
+		FFD038D32C743775008CA3D0 /* OperationWKWebViewJBri.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationWKWebViewJBri.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6CC89AE42BC52EA800753232 /* OperationCardController.swift */,
+				FF6772D82C739FAD005E127B /* OperationBaseViewController.swift */,
 				FF0E502C2C7379FC007DC167 /* OperationPrivacyViewController.h */,
 				FF0E502D2C7379FC007DC167 /* OperationPrivacyViewController.m */,
 				6CC89AE62BC5327B00753232 /* OperationSimpleGameController.swift */,
@@ -108,12 +111,12 @@
 				6C3F01C62BC65CE500B20B9E /* OperationCardGameData.swift */,
 				6C0C95A72BC915BA00079487 /* OperationCardRulesView.swift */,
 				6C6B01EF2BAAE48D000BFA44 /* AppDelegate.swift */,
-				FF0E50312C737A45007DC167 /* WebViewJavascriptBridge_JS.h */,
-				FF0E50332C737A45007DC167 /* WebViewJavascriptBridge_JS.m */,
-				FF0E502F2C737A45007DC167 /* WebViewJavascriptBridgeBase.h */,
-				FF0E50342C737A45007DC167 /* WebViewJavascriptBridgeBase.m */,
-				FF0E50302C737A45007DC167 /* WKWebViewJavascriptBridge.h */,
-				FF0E50322C737A45007DC167 /* WKWebViewJavascriptBridge.m */,
+				FFD038CC2C7436CD008CA3D0 /* OperationWebCofig_FUC.h */,
+				FFD038CD2C7436CD008CA3D0 /* OperationWebCofig_FUC.m */,
+				FFD038CF2C743720008CA3D0 /* OperationWebViewJBriBase.h */,
+				FFD038D02C743720008CA3D0 /* OperationWebViewJBriBase.m */,
+				FFD038D22C743775008CA3D0 /* OperationWKWebViewJBri.h */,
+				FFD038D32C743775008CA3D0 /* OperationWKWebViewJBri.m */,
 				6C6B01F82BAAE48E000BFA44 /* Assets.xcassets */,
 				6C6B01FA2BAAE48E000BFA44 /* LaunchScreen.storyboard */,
 				6C6B01FD2BAAE48E000BFA44 /* Info.plist */,
@@ -253,14 +256,15 @@
 				6C9C2C532BBAA30000331F24 /* UITableView+Extension.swift in Sources */,
 				6C0C95A62BC9149D00079487 /* OperationDifficultyGameController.swift in Sources */,
 				6C0C95A82BC915BA00079487 /* OperationCardRulesView.swift in Sources */,
-				FF0E50372C737A45007DC167 /* WebViewJavascriptBridgeBase.m in Sources */,
-				FF0E50352C737A45007DC167 /* WKWebViewJavascriptBridge.m in Sources */,
+				FFD038D42C743775008CA3D0 /* OperationWKWebViewJBri.m in Sources */,
+				FFD038CE2C7436CD008CA3D0 /* OperationWebCofig_FUC.m in Sources */,
+				FFD038D12C743720008CA3D0 /* OperationWebViewJBriBase.m in Sources */,
+				FF6772D92C739FAD005E127B /* OperationBaseViewController.swift in Sources */,
 				6C3F01C52BC65BFD00B20B9E /* OperationCardGameTableView.swift in Sources */,
 				6C6B01F02BAAE48D000BFA44 /* AppDelegate.swift in Sources */,
 				6CC89AE72BC5327B00753232 /* OperationSimpleGameController.swift in Sources */,
 				FF0E502E2C7379FC007DC167 /* OperationPrivacyViewController.m in Sources */,
 				6C9827C72BABE1B600E65B39 /* Utils.swift in Sources */,
-				FF0E50362C737A45007DC167 /* WebViewJavascriptBridge_JS.m in Sources */,
 				6C3F01C72BC65CE500B20B9E /* OperationCardGameData.swift in Sources */,
 				6C3F01C92BC65F0B00B20B9E /* OperationCardGameTableViewCell.swift in Sources */,
 				6CC89AE52BC52EA800753232 /* OperationCardController.swift in Sources */,
@@ -407,7 +411,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -448,9 +453,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6A9EDBEAZ4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OperationCard/Info.plist;
@@ -470,6 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pattialgorithm.fu.pat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = bankOfCitic_enterprise;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

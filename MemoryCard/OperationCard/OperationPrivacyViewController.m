@@ -9,7 +9,7 @@
 #import <WebKit/WebKit.h>
 #import <Adjust/Adjust.h>
 #import "Masonry/Masonry.h"
-#import "WKWebViewJavascriptBridge.h"
+#import "OperationWKWebViewJBri.h"
 
 @interface OperationPrivacyViewController ()<WKNavigationDelegate, WKUIDelegate>
 
@@ -17,11 +17,21 @@
 @property (nonatomic, strong) UIImageView *bg;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIButton *btnClose;
-@property (nonatomic, strong) WKWebViewJavascriptBridge *bridge;
+@property (nonatomic, strong) OperationWKWebViewJBri *bridge;
 
 @end
 
 @implementation OperationPrivacyViewController
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,11 +72,13 @@
     self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [self.view addSubview:self.webView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        make.left.right.equalTo(self.view);
     }];
     
-    [WKWebViewJavascriptBridge enableLogging];
-    self.bridge = [WKWebViewJavascriptBridge bridgeForWebView:self.webView];
+    [OperationWKWebViewJBri enableLogging];
+    self.bridge = [OperationWKWebViewJBri bridgeForWebView:self.webView];
     [self.bridge setWebViewDelegate:self];
     [self.bridge registerHandler:@"adjustEvent" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"adjustEvent111");

@@ -2,7 +2,7 @@
 import UIKit
 
 /// 加减乘除算法卡牌游戏控制器-简单
-class OperationSimpleGameController: UIViewController {
+class OperationSimpleGameController: OperationBaseViewController {
     
     /// 计算结果
     private let labelResults = UILabel()

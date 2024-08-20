@@ -1,8 +1,8 @@
 //
-//  WebViewJavascriptBridgeBase.h
+//  OperationWebViewJBriBase.h
+//  MemoryCard
 //
-//  Created by @LokiMeyburg on 10/15/14.
-//  Copyright (c) 2014 @LokiMeyburg. All rights reserved.
+//  Created by jin fu on 2024/8/20.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,7 +20,7 @@ typedef NSDictionary WVJBMessage;
 - (NSString*) _evaluateJavascript:(NSString*)javascriptCommand;
 @end
 
-@interface WebViewJavascriptBridgeBase : NSObject
+@interface OperationWebViewJBriBase : NSObject
 
 
 @property (weak, nonatomic) id <WebViewJavascriptBridgeBaseDelegate> delegate;

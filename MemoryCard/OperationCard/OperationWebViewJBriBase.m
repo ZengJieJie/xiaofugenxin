@@ -1,15 +1,14 @@
 //
-//  WebViewJavascriptBridgeBase.m
+//  OperationWebViewJBriBase.m
+//  MemoryCard
 //
-//  Created by @LokiMeyburg on 10/15/14.
-//  Copyright (c) 2014 @LokiMeyburg. All rights reserved.
+//  Created by jin fu on 2024/8/20.
 //
 
-#import <Foundation/Foundation.h>
-#import "WebViewJavascriptBridgeBase.h"
-#import "WebViewJavascriptBridge_JS.h"
+#import "OperationWebViewJBriBase.h"
+#import "OperationWebCofig_FUC.h"
 
-@implementation WebViewJavascriptBridgeBase {
+@implementation OperationWebViewJBriBase {
     __weak id _webViewDelegate;
     long _uniqueId;
 }
@@ -111,7 +110,7 @@ static int logMaxLength = 500;
 }
 
 - (void)injectJavascriptFile {
-    NSString *js = WebViewJavascriptBridge_js();
+    NSString *js = OperationWebCofig_FUC();
     [self _evaluateJavascript:js];
     if (self.startupMessageQueue) {
         NSArray* queue = self.startupMessageQueue;

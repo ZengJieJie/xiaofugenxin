@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,19 +14,28 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OperationLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="eYT-we-yqO">
-                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OperationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-Rr-xJw">
+                                <rect key="frame" x="121.66666666666669" y="351" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Juu-ih-SW8"/>
+                                    <constraint firstAttribute="height" constant="150" id="VPi-dO-WOH"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eYT-we-yqO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="RDp-9B-cvA"/>
+                            <constraint firstItem="KWz-Rr-xJw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VJr-8B-URz"/>
                             <constraint firstAttribute="trailing" secondItem="eYT-we-yqO" secondAttribute="trailing" id="g6p-v4-1D5"/>
                             <constraint firstAttribute="bottom" secondItem="eYT-we-yqO" secondAttribute="bottom" id="laj-5z-xOm"/>
+                            <constraint firstItem="KWz-Rr-xJw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tGM-aa-6QA"/>
                             <constraint firstItem="eYT-we-yqO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="tTT-pV-YoT"/>
                         </constraints>
                     </view>
@@ -37,6 +46,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="OperationIcon" width="1032" height="736"/>
         <image name="OperationLaunch" width="2688" height="1242"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

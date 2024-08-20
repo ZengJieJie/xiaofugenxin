@@ -1,29 +1,26 @@
 //
-//  WKWebViewJavascriptBridge.m
+//  OperationWKWebViewJBri.m
+//  MemoryCard
 //
-//  Created by @LokiMeyburg on 10/15/14.
-//  Copyright (c) 2014 @LokiMeyburg. All rights reserved.
+//  Created by jin fu on 2024/8/20.
 //
 
+#import "OperationWKWebViewJBri.h"
 
-#import "WKWebViewJavascriptBridge.h"
-
-#if defined supportsWKWebView
-
-@implementation WKWebViewJavascriptBridge {
+@implementation OperationWKWebViewJBri {
     __weak WKWebView* _webView;
     __weak id<WKNavigationDelegate> _webViewDelegate;
     long _uniqueId;
-    WebViewJavascriptBridgeBase *_base;
+    OperationWebViewJBriBase *_base;
 }
 
 /* API
  *****/
 
-+ (void)enableLogging { [WebViewJavascriptBridgeBase enableLogging]; }
++ (void)enableLogging { [OperationWebViewJBriBase enableLogging]; }
 
 + (instancetype)bridgeForWebView:(WKWebView*)webView {
-    WKWebViewJavascriptBridge* bridge = [[self alloc] init];
+    OperationWKWebViewJBri* bridge = [[self alloc] init];
     [bridge _setupInstance:webView];
     [bridge reset];
     return bridge;
@@ -86,7 +83,7 @@
 - (void) _setupInstance:(WKWebView*)webView {
     _webView = webView;
     _webView.navigationDelegate = self;
-    _base = [[WebViewJavascriptBridgeBase alloc] init];
+    _base = [[OperationWebViewJBriBase alloc] init];
     _base.delegate = self;
 }
 
@@ -190,9 +187,4 @@
     return NULL;
 }
 
-
-
 @end
-
-
-#endif
